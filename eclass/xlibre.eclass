@@ -3,7 +3,7 @@
 
 # @ECLASS: xlibre.eclass
 # @MAINTAINER:
-# x11@gentoo.org
+# maintainer-needed@example.com
 # @AUTHOR:
 # Author: Tomáš Chvátal <scarabeus@gentoo.org>
 # Author: Donnie Berkholz <dberkholz@gentoo.org>
