@@ -6,7 +6,7 @@ EAPI=8
 
 inherit xlibre
 
-DESCRIPTION="X.Org driver for ASpeedTech cards"
+DESCRIPTION="XLibre driver for ASpeedTech cards"
 if [[ ${PV} != 9999* ]]; then
 	KEYWORDS="~amd64"
 fi

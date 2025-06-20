@@ -12,7 +12,7 @@ if [[ ${PV} != 9999* ]]; then
 	KEYWORDS="~amd64"
 fi
 
-DESCRIPTION="X.Org driver for Intel cards"
+DESCRIPTION="XLibre driver for Intel cards"
 
 IUSE="debug +sna tools +udev uxa valgrind xvmc"
 

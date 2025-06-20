@@ -78,7 +78,7 @@ unset FONT_ECLASS GIT_ECLASS
 # @DESCRIPTION:
 # Set up SRC_URI for individual modular releases. If set to an empty
 # string, no SRC_URI will be provided by the eclass.
-: "${XLIBRE_BASE_INDIVIDUAL_URI="https://www.x.org/releases/individual"}"
+: "${XLIBRE_BASE_INDIVIDUAL_URI="https://github.com/X11Libre/${PN}/releases/FIXME"}"
 
 # @ECLASS_VARIABLE: XLIBRE_MODULE
 # @PRE_INHERIT
@@ -110,7 +110,7 @@ case "${CATEGORY}/${P}" in
 	x11-base/xlibre-server-*) 	XLIBRE_PACKAGE_NAME=xserver ;;
 esac
 
-HOMEPAGE="https://www.x.org/wiki/ https://github.com/X11Libre/${XLIBRE_MODULE}${XLIBRE_PACKAGE_NAME}"
+HOMEPAGE="https://github.com/X11Libre/${XLIBRE_MODULE}${XLIBRE_PACKAGE_NAME}"
 
 # @ECLASS_VARIABLE: XLIBRE_TARBALL_SUFFIX
 # @PRE_INHERIT

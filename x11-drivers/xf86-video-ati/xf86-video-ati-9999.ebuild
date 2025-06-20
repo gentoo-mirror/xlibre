@@ -12,7 +12,6 @@ if [[ ${PV} != 9999* ]]; then
 fi
 
 DESCRIPTION="ATI video driver"
-HOMEPAGE="https://www.x.org/wiki/ati/"
 
 IUSE="udev"
 

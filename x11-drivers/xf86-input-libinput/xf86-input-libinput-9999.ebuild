@@ -6,7 +6,7 @@ EAPI=8
 
 inherit linux-info xlibre
 
-DESCRIPTION="X.org input driver based on libinput"
+DESCRIPTION="XLibre input driver based on libinput"
 if [[ ${PV} != 9999* ]]; then
 	KEYWORDS="~amd64"
 fi
