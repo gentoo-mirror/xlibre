@@ -3,7 +3,7 @@
 
 EAPI=8
 
-X11LIBRE_PACKAGE_NAME="xf86-video-r128"
+
 inherit flag-o-matic xlibre
 
 DESCRIPTION="ATI Rage128 video driver"

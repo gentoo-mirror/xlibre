@@ -4,7 +4,7 @@
 EAPI=8
 
 X11LIBRE_EAUTORECONF="no"
-X11LIBRE_PACKAGE_NAME="xserver"
+
 inherit flag-o-matic xlibre meson
 
 DESCRIPTION="XLibre X servers"

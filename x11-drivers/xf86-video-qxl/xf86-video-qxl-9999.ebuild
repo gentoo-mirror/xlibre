@@ -4,7 +4,7 @@
 EAPI=8
 
 PYTHON_COMPAT=( python3_{10..13} )
-X11LIBRE_PACKAGE_NAME="xf86-video-qxl"
+
 inherit python-single-r1 xlibre
 
 DESCRIPTION="QEMU QXL paravirt video driver"

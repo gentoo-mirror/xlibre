@@ -3,7 +3,7 @@
 
 EAPI=8
 
-X11LIBRE_PACKAGE_NAME="xf86-input-libinput"
+
 inherit linux-info xlibre
 
 DESCRIPTION="X.org input driver based on libinput"

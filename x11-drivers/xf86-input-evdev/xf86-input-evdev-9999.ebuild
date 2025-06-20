@@ -3,7 +3,7 @@
 
 EAPI=8
 
-X11LIBRE_PACKAGE_NAME="xf86-input-evdev"
+
 inherit linux-info xlibre
 
 DESCRIPTION="Generic Linux input driver"

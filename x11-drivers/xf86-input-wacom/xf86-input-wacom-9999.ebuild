@@ -3,7 +3,7 @@
 
 EAPI=8
 
-X11LIBRE_PACKAGE_NAME="xf86-input-wacom"
+
 inherit linux-info systemd udev xlibre meson
 
 DESCRIPTION="Driver for Wacom tablets and drawing devices"

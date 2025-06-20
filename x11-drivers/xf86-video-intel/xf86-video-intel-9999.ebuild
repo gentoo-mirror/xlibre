@@ -5,7 +5,7 @@ EAPI=8
 
 X11LIBRE_DRI=dri
 X11LIBRE_EAUTORECONF=yes
-X11LIBRE_PACKAGE_NAME="xf86-video-intel"
+
 inherit linux-info xlibre flag-o-matic
 
 if [[ ${PV} != 9999* ]]; then

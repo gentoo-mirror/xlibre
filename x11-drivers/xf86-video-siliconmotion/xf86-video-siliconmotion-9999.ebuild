@@ -3,7 +3,7 @@
 
 EAPI=8
 
-X11LIBRE_PACKAGE_NAME="xf86-video-siliconmotion"
+
 inherit xlibre
 
 DESCRIPTION="Silicon Motion video driver"

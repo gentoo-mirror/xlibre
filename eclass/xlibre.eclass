@@ -106,6 +106,9 @@ fi
 # For git checkout the git repository might differ from package name.
 # This variable can be used for proper directory specification
 : "${X11LIBRE_PACKAGE_NAME:=${PN}}"
+case "${CATEGORY}/${P}" in
+	x11-base/xlibre-server-*) 	X11LIBRE_PACKAGE_NAME=xserver ;;
+esac
 
 HOMEPAGE="https://www.x.org/wiki/ https://github.com/X11Libre/${X11LIBRE_MODULE}${X11LIBRE_PACKAGE_NAME}"
 

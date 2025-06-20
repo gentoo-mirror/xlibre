@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
-X11LIBRE_PACKAGE_NAME="xf86-input-vmmouse"
+
 inherit udev xlibre
 
 DESCRIPTION="VMWare mouse input driver"

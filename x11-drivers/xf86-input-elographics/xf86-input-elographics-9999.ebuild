@@ -3,7 +3,7 @@
 
 EAPI=8
 
-X11LIBRE_PACKAGE_NAME="xf86-input-elographics"
+
 inherit xlibre
 
 DESCRIPTION="Elographics input driver"

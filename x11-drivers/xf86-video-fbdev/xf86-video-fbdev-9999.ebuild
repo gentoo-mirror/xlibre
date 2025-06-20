@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
-X11LIBRE_PACKAGE_NAME="xf86-video-fbdev"
+
 inherit xlibre
 
 DESCRIPTION="video driver for framebuffer device"

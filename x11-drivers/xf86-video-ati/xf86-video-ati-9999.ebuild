@@ -4,7 +4,7 @@
 EAPI=8
 
 X11LIBRE_DRI=always
-X11LIBRE_PACKAGE_NAME="xf86-video-ati"
+
 inherit linux-info xlibre
 
 if [[ ${PV} != 9999* ]]; then
