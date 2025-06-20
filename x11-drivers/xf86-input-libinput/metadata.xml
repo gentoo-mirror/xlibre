@@ -5,4 +5,7 @@
     <email>maintainer-needed@example.com</email>
     <name>XLibre</name>
   </maintainer>
+  <upstream>
+    <remote-id type="github">X11Libre/xf86-input-libinput</remote-id>
+  </upstream>
 </pkgmetadata>

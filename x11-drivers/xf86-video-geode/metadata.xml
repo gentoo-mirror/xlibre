@@ -8,4 +8,7 @@
   <use>
     <flag name="ztv">Enable building the V4L2 ZTV driver</flag>
   </use>
+  <upstream>
+    <remote-id type="github">X11Libre/xf86-video-geode</remote-id>
+  </upstream>
 </pkgmetadata>

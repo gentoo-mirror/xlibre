@@ -11,4 +11,7 @@
     <flag name="uxa">Enable UMA Acceleration Architecture</flag>
     <flag name="xvmc">Enables X-Video Motion Compensation support</flag>
   </use>
+  <upstream>
+    <remote-id type="github">X11Libre/xf86-video-intel</remote-id>
+  </upstream>
 </pkgmetadata>
