@@ -13,7 +13,7 @@ fi
 DEPEND="x11-base/xorg-proto"
 
 src_configure() {
-	local X11LIBRE_CONFIGURE_OPTIONS=(
+	local XLIBRE_CONFIGURE_OPTIONS=(
 		--with-udev-rules-dir=$(get_udevdir)/rules.d
 	)
 	xlibre_src_configure

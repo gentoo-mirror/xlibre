@@ -3,7 +3,7 @@
 
 EAPI=8
 
-X11LIBRE_EAUTORECONF="no"
+XLIBRE_EAUTORECONF="no"
 
 inherit flag-o-matic xlibre meson
 

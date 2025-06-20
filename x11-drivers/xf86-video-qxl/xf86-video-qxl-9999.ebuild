@@ -39,7 +39,7 @@ src_prepare() {
 }
 
 src_configure() {
-	local X11LIBRE_CONFIGURE_OPTIONS=(
+	local XLIBRE_CONFIGURE_OPTIONS=(
 		$(use_enable xspice)
 	)
 	xlibre_src_configure

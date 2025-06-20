@@ -12,7 +12,7 @@ if [[ ${PV} != 9999* ]]; then
 fi
 
 src_configure() {
-	local X11LIBRE_CONFIGURE_OPTIONS=(
+	local XLIBRE_CONFIGURE_OPTIONS=(
 		--disable-dri
 	)
 	xlibre_src_configure

@@ -3,7 +3,7 @@
 
 EAPI=8
 
-X11LIBRE_DRI=always
+XLIBRE_DRI=always
 
 inherit linux-info xlibre
 
@@ -42,7 +42,7 @@ pkg_setup() {
 }
 
 src_configure() {
-	local X11LIBRE_CONFIGURE_OPTIONS=(
+	local XLIBRE_CONFIGURE_OPTIONS=(
 		--enable-glamor
 		$(use_enable udev)
 	)

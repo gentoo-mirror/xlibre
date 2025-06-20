@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
-X11LIBRE_DRI="always"
+XLIBRE_DRI="always"
 
 inherit xlibre
 
@@ -20,7 +20,7 @@ RDEPEND=">=x11-libs/libdrm-2.4.89[video_cards_amdgpu]
 DEPEND="${RDEPEND}"
 
 src_configure() {
-	local X11LIBRE_CONFIGURE_OPTIONS=(
+	local XLIBRE_CONFIGURE_OPTIONS=(
 		--enable-glamor
 		$(use_enable udev)
 	)

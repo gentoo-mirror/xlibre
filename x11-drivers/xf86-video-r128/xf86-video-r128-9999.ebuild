@@ -15,7 +15,7 @@ src_configure() {
 	# always use C11 semantics
 	append-cflags -std=gnu11
 
-	local X11LIBRE_CONFIGURE_OPTIONS=(
+	local XLIBRE_CONFIGURE_OPTIONS=(
 		--disable-dri
 	)
 	xlibre_src_configure

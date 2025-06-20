@@ -3,7 +3,7 @@
 
 EAPI=8
 
-X11LIBRE_DRI="always"
+XLIBRE_DRI="always"
 
 inherit xlibre
 

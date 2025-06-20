@@ -34,7 +34,7 @@ _XLIBRE_ECLASS=1
 GIT_ECLASS=""
 if [[ ${PV} == *9999* ]]; then
 	GIT_ECLASS="git-r3"
-	: "${X11LIBRE_EAUTORECONF:="yes"}"
+	: "${XLIBRE_EAUTORECONF:="yes"}"
 fi
 
 # If we're a font package, but not the font.alias one
@@ -51,12 +51,12 @@ if [[ ${CATEGORY} = media-fonts ]]; then
 	esac
 fi
 
-# @ECLASS_VARIABLE: X11LIBRE_MULTILIB
+# @ECLASS_VARIABLE: XLIBRE_MULTILIB
 # @PRE_INHERIT
 # @DESCRIPTION:
 # If set to 'yes', the multilib support for package will be enabled. Set
 # before inheriting this eclass.
-: "${X11LIBRE_MULTILIB:="no"}"
+: "${XLIBRE_MULTILIB:="no"}"
 
 # we need to inherit autotools first to get the deps
 AUTOTOOLS_AUTO_DEPEND=no
@@ -64,64 +64,64 @@ inherit autotools libtool multilib toolchain-funcs flag-o-matic \
 	${FONT_ECLASS} ${GIT_ECLASS}
 unset FONT_ECLASS GIT_ECLASS
 
-[[ ${X11LIBRE_MULTILIB} == yes ]] && inherit multilib-minimal
+[[ ${XLIBRE_MULTILIB} == yes ]] && inherit multilib-minimal
 
-# @ECLASS_VARIABLE: X11LIBRE_EAUTORECONF
+# @ECLASS_VARIABLE: XLIBRE_EAUTORECONF
 # @PRE_INHERIT
 # @DESCRIPTION:
 # If set to 'yes' and configure.ac exists, eautoreconf will run. Set
 # before inheriting this eclass.
-: "${X11LIBRE_EAUTORECONF:="no"}"
+: "${XLIBRE_EAUTORECONF:="no"}"
 
-# @ECLASS_VARIABLE: X11LIBRE_BASE_INDIVIDUAL_URI
+# @ECLASS_VARIABLE: XLIBRE_BASE_INDIVIDUAL_URI
 # @PRE_INHERIT
 # @DESCRIPTION:
 # Set up SRC_URI for individual modular releases. If set to an empty
 # string, no SRC_URI will be provided by the eclass.
-: "${X11LIBRE_BASE_INDIVIDUAL_URI="https://www.x.org/releases/individual"}"
+: "${XLIBRE_BASE_INDIVIDUAL_URI="https://www.x.org/releases/individual"}"
 
-# @ECLASS_VARIABLE: X11LIBRE_MODULE
+# @ECLASS_VARIABLE: XLIBRE_MODULE
 # @PRE_INHERIT
 # @DESCRIPTION:
 # The subdirectory to download source from. Possible settings are app,
 # doc, data, util, driver, font, lib, proto, xserver. Set above the
 # inherit to override the default autoconfigured module.
-: "${X11LIBRE_MODULE:="auto"}"
-if [[ ${X11LIBRE_MODULE} == auto ]]; then
+: "${XLIBRE_MODULE:="auto"}"
+if [[ ${XLIBRE_MODULE} == auto ]]; then
 	case "${CATEGORY}/${P}" in
-		app-doc/*)               X11LIBRE_MODULE=doc/     ;;
-		media-fonts/*)           X11LIBRE_MODULE=font/    ;;
-		x11-apps/*|x11-wm/*)     X11LIBRE_MODULE=app/     ;;
-		x11-misc/*|x11-themes/*) X11LIBRE_MODULE=util/    ;;
-		x11-base/*)              X11LIBRE_MODULE=         ;;
-		x11-drivers/*)           X11LIBRE_MODULE=         ;;
-		x11-libs/*)              X11LIBRE_MODULE=lib/     ;;
-		*)                       X11LIBRE_MODULE=         ;;
+		app-doc/*)               XLIBRE_MODULE=doc/     ;;
+		media-fonts/*)           XLIBRE_MODULE=font/    ;;
+		x11-apps/*|x11-wm/*)     XLIBRE_MODULE=app/     ;;
+		x11-misc/*|x11-themes/*) XLIBRE_MODULE=util/    ;;
+		x11-base/*)              XLIBRE_MODULE=         ;;
+		x11-drivers/*)           XLIBRE_MODULE=         ;;
+		x11-libs/*)              XLIBRE_MODULE=lib/     ;;
+		*)                       XLIBRE_MODULE=         ;;
 	esac
 fi
 
-# @ECLASS_VARIABLE: X11LIBRE_PACKAGE_NAME
+# @ECLASS_VARIABLE: XLIBRE_PACKAGE_NAME
 # @PRE_INHERIT
 # @DESCRIPTION:
 # For git checkout the git repository might differ from package name.
 # This variable can be used for proper directory specification
-: "${X11LIBRE_PACKAGE_NAME:=${PN}}"
+: "${XLIBRE_PACKAGE_NAME:=${PN}}"
 case "${CATEGORY}/${P}" in
-	x11-base/xlibre-server-*) 	X11LIBRE_PACKAGE_NAME=xserver ;;
+	x11-base/xlibre-server-*) 	XLIBRE_PACKAGE_NAME=xserver ;;
 esac
 
-HOMEPAGE="https://www.x.org/wiki/ https://github.com/X11Libre/${X11LIBRE_MODULE}${X11LIBRE_PACKAGE_NAME}"
+HOMEPAGE="https://www.x.org/wiki/ https://github.com/X11Libre/${XLIBRE_MODULE}${XLIBRE_PACKAGE_NAME}"
 
-# @ECLASS_VARIABLE: X11LIBRE_TARBALL_SUFFIX
+# @ECLASS_VARIABLE: XLIBRE_TARBALL_SUFFIX
 # @PRE_INHERIT
 # @DESCRIPTION:
 # Most X11 projects provide tarballs as tar.xz. This eclass defaults to xz.
-: "${X11LIBRE_TARBALL_SUFFIX:="xz"}"
+: "${XLIBRE_TARBALL_SUFFIX:="xz"}"
 
 if [[ ${PV} == *9999* ]]; then
-	: "${EGIT_REPO_URI:="https://github.com/X11Libre/${X11LIBRE_MODULE}${X11LIBRE_PACKAGE_NAME}.git"}"
-elif [[ -n ${X11LIBRE_BASE_INDIVIDUAL_URI} ]]; then
-	SRC_URI="${X11LIBRE_BASE_INDIVIDUAL_URI}/${X11LIBRE_MODULE}${P}.tar.${X11LIBRE_TARBALL_SUFFIX}"
+	: "${EGIT_REPO_URI:="https://github.com/X11Libre/${XLIBRE_MODULE}${XLIBRE_PACKAGE_NAME}.git"}"
+elif [[ -n ${XLIBRE_BASE_INDIVIDUAL_URI} ]]; then
+	SRC_URI="${XLIBRE_BASE_INDIVIDUAL_URI}/${XLIBRE_MODULE}${P}.tar.${XLIBRE_TARBALL_SUFFIX}"
 fi
 
 : "${SLOT:=0}"
@@ -139,7 +139,7 @@ if [[ ${PN} != util-macros ]] ; then
 	# Required even by xorg-server
 	[[ ${PN} == "font-util" ]] || EAUTORECONF_DEPEND+=" >=media-fonts/font-util-1.2.0"
 fi
-if [[ ${X11LIBRE_EAUTORECONF} == no ]] ; then
+if [[ ${XLIBRE_EAUTORECONF} == no ]] ; then
 	BDEPEND+=" ${LIBTOOL_DEPEND}"
 else
 	BDEPEND+=" ${EAUTORECONF_DEPEND}"
@@ -172,28 +172,28 @@ if [[ ${FONT} == yes ]]; then
 fi
 BDEPEND+=" virtual/pkgconfig"
 
-# @ECLASS_VARIABLE: X11LIBRE_DRI
+# @ECLASS_VARIABLE: XLIBRE_DRI
 # @PRE_INHERIT
 # @DESCRIPTION:
 # Possible values are "always" or the value of the useflag DRI capabilities
 # are required for. Default value is "no"
 #
-# Eg. X11LIBRE_DRI="opengl" will pull all dri dependent deps for opengl useflag
-: "${X11LIBRE_DRI:="no"}"
+# Eg. XLIBRE_DRI="opengl" will pull all dri dependent deps for opengl useflag
+: "${XLIBRE_DRI:="no"}"
 
 DRI_COMMON_DEPEND="
 	x11-base/xorg-server[-minimal]
 	x11-libs/libdrm
 "
-case ${X11LIBRE_DRI} in
+case ${XLIBRE_DRI} in
 	no)
 		;;
 	always)
 		COMMON_DEPEND+=" ${DRI_COMMON_DEPEND}"
 		;;
 	*)
-		COMMON_DEPEND+=" ${X11LIBRE_DRI}? ( ${DRI_COMMON_DEPEND} )"
-		IUSE+=" ${X11LIBRE_DRI}"
+		COMMON_DEPEND+=" ${XLIBRE_DRI}? ( ${DRI_COMMON_DEPEND} )"
+		IUSE+=" ${XLIBRE_DRI}"
 		;;
 esac
 unset DRI_COMMON_DEPEND
@@ -206,14 +206,14 @@ if [[ ${PN} == xf86-video-* || ${PN} == xf86-input-* ]]; then
 fi
 
 
-# @ECLASS_VARIABLE: X11LIBRE_DOC
+# @ECLASS_VARIABLE: XLIBRE_DOC
 # @PRE_INHERIT
 # @DESCRIPTION:
 # Possible values are "always" or the value of the useflag doc packages
 # are required for. Default value is "no"
 #
-# Eg. X11LIBRE_DOC="manual" will pull all doc dependent deps for manual useflag
-: "${X11LIBRE_DOC:="no"}"
+# Eg. XLIBRE_DOC="manual" will pull all doc dependent deps for manual useflag
+: "${XLIBRE_DOC:="no"}"
 
 DOC_DEPEND="
 	doc? (
@@ -224,15 +224,15 @@ DOC_DEPEND="
 		app-text/docbook-xml-dtd:4.3
 	)
 "
-case ${X11LIBRE_DOC} in
+case ${XLIBRE_DOC} in
 	no)
 		;;
 	always)
 		BDEPEND+=" ${DOC_DEPEND}"
 		;;
 	*)
-		BDEPEND+=" ${X11LIBRE_DOC}? ( ${DOC_DEPEND} )"
-		IUSE+=" ${X11LIBRE_DOC}"
+		BDEPEND+=" ${XLIBRE_DOC}? ( ${DOC_DEPEND} )"
+		IUSE+=" ${XLIBRE_DOC}"
 		;;
 esac
 unset DOC_DEPEND
@@ -276,7 +276,7 @@ xlibre_src_unpack() {
 xlibre_reconf_source() {
 	debug-print-function ${FUNCNAME} "$@"
 
-	if [[ ${X11LIBRE_EAUTORECONF} != no ]] ; then
+	if [[ ${XLIBRE_EAUTORECONF} != no ]] ; then
 		eautoreconf
 	else
 		elibtoolize --patch-only
@@ -337,7 +337,7 @@ multilib_src_configure() {
 	ECONF_SOURCE="${S}" econf "${econfargs[@]}"
 }
 
-# @VARIABLE: X11LIBRE_CONFIGURE_OPTIONS
+# @VARIABLE: XLIBRE_CONFIGURE_OPTIONS
 # @DESCRIPTION:
 # Array of an additional options to pass to configure.
 # @DEFAULT_UNSET
@@ -350,7 +350,7 @@ xlibre_src_configure() {
 
 	xlibre_flags_setup
 
-	local xorgconfadd=("${X11LIBRE_CONFIGURE_OPTIONS[@]}")
+	local xorgconfadd=("${XLIBRE_CONFIGURE_OPTIONS[@]}")
 
 	local FONT_OPTIONS=()
 	[[ -n "${FONT}" ]] && xlibre_font_configure
@@ -388,7 +388,7 @@ xlibre_src_configure() {
 		)
 	fi
 
-	if [[ ${X11LIBRE_MULTILIB} == yes ]]; then
+	if [[ ${XLIBRE_MULTILIB} == yes ]]; then
 		multilib-minimal_src_configure "$@"
 	else
 		econf "${econfargs[@]}" "$@"
@@ -405,7 +405,7 @@ multilib_src_compile() {
 xlibre_src_compile() {
 	debug-print-function ${FUNCNAME} "$@"
 
-	if [[ ${X11LIBRE_MULTILIB} == yes ]]; then
+	if [[ ${XLIBRE_MULTILIB} == yes ]]; then
 		multilib-minimal_src_compile "$@"
 	else
 		emake "$@"
@@ -424,7 +424,7 @@ xlibre_src_install() {
 
 	local install_args=( docdir="${EPREFIX}/usr/share/doc/${PF}" )
 
-	if [[ ${X11LIBRE_MULTILIB} == yes ]]; then
+	if [[ ${XLIBRE_MULTILIB} == yes ]]; then
 		multilib-minimal_src_install "$@"
 	else
 		emake DESTDIR="${D}" "${install_args[@]}" "$@" install
@@ -433,7 +433,7 @@ xlibre_src_install() {
 
 	# Many X11 libraries unconditionally install developer documentation
 	if [[ -d "${D}"/usr/share/man/man3 ]]; then
-		! in_iuse doc && eqawarn "QA Notice: ebuild should set X11LIBRE_DOC=doc since package installs library documentation"
+		! in_iuse doc && eqawarn "QA Notice: ebuild should set XLIBRE_DOC=doc since package installs library documentation"
 	fi
 
 	if in_iuse doc && ! use doc; then

@@ -19,7 +19,7 @@ DEPEND="
 "
 
 src_configure() {
-	local X11LIBRE_CONFIGURE_OPTIONS=(
+	local XLIBRE_CONFIGURE_OPTIONS=(
 		$(use_enable ztv)
 	)
 	xlibre_src_configure

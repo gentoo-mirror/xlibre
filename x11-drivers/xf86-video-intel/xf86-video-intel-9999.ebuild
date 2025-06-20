@@ -3,8 +3,8 @@
 
 EAPI=8
 
-X11LIBRE_DRI=dri
-X11LIBRE_EAUTORECONF=yes
+XLIBRE_DRI=dri
+XLIBRE_EAUTORECONF=yes
 
 inherit linux-info xlibre flag-o-matic
 
@@ -64,7 +64,7 @@ src_configure() {
 	# Uses the 'flatten' attribute which explodes with LTO (bug #864379)
 	filter-lto
 
-	local X11LIBRE_CONFIGURE_OPTIONS=(
+	local XLIBRE_CONFIGURE_OPTIONS=(
 		--disable-dri1
 		$(use_enable debug)
 		$(use_enable dri)
