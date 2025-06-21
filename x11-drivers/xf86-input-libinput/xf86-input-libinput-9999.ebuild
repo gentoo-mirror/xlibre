@@ -5,8 +5,6 @@ EAPI=8
 
 inherit linux-info xlibre
 
-DESCRIPTION="X.org input driver based on libinput"
-
 DESCRIPTION="XLibre input driver based on libinput"
 if [[ ${PV} != 9999* ]]; then
 	KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~loong ~m68k ~mips ~ppc ~ppc64 ~riscv ~s390 ~sparc ~x86"
