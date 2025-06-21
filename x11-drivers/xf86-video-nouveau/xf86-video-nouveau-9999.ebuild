@@ -4,7 +4,6 @@
 EAPI=8
 
 XLIBRE_DRI="always"
-
 inherit xlibre
 
 DESCRIPTION="Accelerated Open Source driver for nVidia cards"

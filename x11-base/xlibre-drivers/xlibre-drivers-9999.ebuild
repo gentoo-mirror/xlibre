@@ -4,7 +4,7 @@
 EAPI=7
 
 DESCRIPTION="Meta package containing deps on all xlibre drivers"
-HOMEPAGE="No_homepage"
+HOMEPAGE="https://github.com/X11Libre/ports-gentoo"
 
 LICENSE="metapackage"
 SLOT="0"

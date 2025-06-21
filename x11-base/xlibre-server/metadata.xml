@@ -14,4 +14,7 @@
     <flag name="xorg">Build the Xorg X server (HIGHLY RECOMMENDED)</flag>
     <flag name="xvfb">Build the Xvfb server</flag>
   </use>
+  <upstream>
+    <remote-id type="github">X11Libre/xserver</remote-id>
+  </upstream>
 </pkgmetadata>
