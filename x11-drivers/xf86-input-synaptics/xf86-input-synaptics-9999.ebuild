@@ -3,7 +3,6 @@
 
 EAPI=8
 
-
 inherit linux-info xlibre
 
 DESCRIPTION="Driver for Synaptics touchpads"

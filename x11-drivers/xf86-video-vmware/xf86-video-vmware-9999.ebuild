@@ -4,7 +4,6 @@
 EAPI=8
 
 XLIBRE_DRI=always
-
 inherit xlibre
 
 DESCRIPTION="VMware SVGA video driver"
@@ -15,6 +14,6 @@ fi
 RDEPEND="
 	kernel_linux? (
 		>=x11-libs/libdrm-2.4.96[video_cards_vmware]
-		media-libs/mesa
+		media-libs/mesa[xa]
 	)"
 DEPEND="${RDEPEND}"

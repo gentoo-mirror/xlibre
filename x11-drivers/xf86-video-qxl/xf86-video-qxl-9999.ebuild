@@ -4,10 +4,10 @@
 EAPI=8
 
 PYTHON_COMPAT=( python3_{10..13} )
-
 inherit python-single-r1 xlibre
 
 DESCRIPTION="QEMU QXL paravirt video driver"
+
 if [[ ${PV} != 9999* ]]; then
 	KEYWORDS="~amd64 ~loong ~x86"
 fi

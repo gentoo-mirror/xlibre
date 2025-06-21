@@ -6,11 +6,10 @@ EAPI=8
 XLIBRE_EAUTORECONF="no"
 
 inherit flag-o-matic xlibre meson
+EGIT_REPO_URI="https://github.com/X11Libre/xserver.git"
 
 DESCRIPTION="XLibre X servers"
 SLOT="0/${PV}"
-
-# This is the only ebuild for now, keep keywords
 if [[ ${PV} != 9999* ]]; then
 	KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~loong ~m68k ~mips ~ppc ~ppc64 ~riscv ~s390 ~sparc ~x86 ~amd64-linux ~x86-linux"
 fi

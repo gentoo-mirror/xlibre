@@ -3,7 +3,6 @@
 
 EAPI=8
 
-
 inherit xlibre
 
 DESCRIPTION="Silicon Motion video driver"
