@@ -10,7 +10,7 @@ Use [`eselect-repository`](https://wiki.gentoo.org/wiki/Eselect/Repository):
 # eselect repository add xlibre git https://github.com/X11Libre/ports-gentoo
 ```
 
-You may want to adjust the [priority](https://wiki.gentoo.org/wiki//etc/portage/repos.conf#Ebuild_repository_priority) of the `xlibre` repository in `/etc/portage/repos.conf` like so:
+You may want to adjust the priority of the `xlibre` repository in [`/etc/portage/repos.conf`](https://wiki.gentoo.org/wiki//etc/portage/repos.conf) like so:
 
 ```
 [xlibre]
@@ -38,7 +38,7 @@ installing `x11-base/xlibre-server` and the `x11-base/xorg-server::xlibre` dummy
 
 ## Using the overlay
 
-Right now there is no released version of XLibre Xserver. To use the XLibre [live ebuilds](https://wiki.gentoo.org/wiki/Live_ebuilds), add the following lines to your [/etc/portage/package.accept\_keywords](https://wiki.gentoo.org/wiki//etc/portage/package.accept_keywords) file:
+Right now there is no released version of XLibre Xserver. To use the XLibre [live ebuilds](https://wiki.gentoo.org/wiki/Live_ebuilds), add the following lines to your [`/etc/portage/package.accept_keywords`](https://wiki.gentoo.org/wiki//etc/portage/package.accept_keywords) file:
 
 ```
 */*::xlibre **
@@ -78,6 +78,49 @@ If `/etc/portage/package.accept_keywords` is a directory, then create a file lik
 
 **WARNING:** The live ebuilds may break at any time. Use them only if you want to develop or alpha test XLibre. If in doubt, wait for the first release.
 
+## List of X Drivers not in the Overlay
+
+There are some older X drivers which are not packaged in Gentoo anymore and so they aren't packaged here as well as we started with the Gentoo packages.
+
+These packages are:
+
+* xf86-input-keyboard
+* xf86-input-mouse
+* xf86-video-apm
+* xf86-video-ark
+* xf86-video-chips
+* xf86-video-cirrus
+* xf86-video-freedreno
+* xf86-video-i128
+* xf86-video-i740
+* xf86-video-mach64
+* xf86-video-neomagic
+* xf86-video-nested
+* xf86-video-nv
+* xf86-video-omap
+* xf86-video-rendition
+* xf86-video-s3virge
+* xf86-video-savage
+* xf86-video-sis
+* xf86-video-sisusb
+* xf86-video-suncg14
+* xf86-video-suncg3
+* xf86-video-suncg6
+* xf86-video-sunffb
+* xf86-video-sunleo
+* xf86-video-suntcx
+* xf86-video-tdfx
+* xf86-video-trident
+* xf86-video-v4l
+* xf86-video-vbox
+* xf86-video-voodoo
+* xf86-video-wsfb
+* xf86-video-xgi
+
+For `xf86-input-keyboard` there is already a pull request to [bring back the Linux support](https://github.com/X11Libre/xf86-input-keyboard/pull/1). For `xf86-input-mouse` there is [another one](https://github.com/X11Libre/xf86-input-mouse/pull/1) too.
+
+If you are using any hardware that requires one of the above drivers then don't hesitate and [open an issue](https://github.com/X11Libre/ports-gentoo/issues). We will see what we can do.
+
 ## Testing Third-Party Repositories Added as a Pull Request
 
 To build pull requests from third-party repositories using the Git live ebuilds you can override the Git repo, branch and commit values set in the ebuild. Just provide one or more of the following variables on the command line:
@@ -102,8 +145,8 @@ You will see the actual names of the variables specific to each ebuild when you 
 # ebuild xlibre-server-9999.ebuild unpack
 ```
 
-For further reference of the override mechanism see [git-r3.eclass – Gentoo Development Guide](https://devmanual.gentoo.org/eclass-reference/git-r3.eclass/index.html) and its implementation.
+For further reference of the override mechanism see the [`git-r3.eclass`](https://devmanual.gentoo.org/eclass-reference/git-r3.eclass/index.html) and its implementation.
 
 ## Using an Alternative udev Implementation
 
-If you like to use XLibre with udev support but stay away from eudev/systemd you may want to consider [sys-libs/libudev-zero - Gentoo Portage Overlays](https://gpo.zugaina.org/sys-libs/libudev-zero).
+If you like to use XLibre with udev support but stay away from eudev/systemd you may want to consider [libudev-zero](https://github.com/illiliti/libudev-zero). There are ebuilds for it at [sys-libs/libudev-zero - Gentoo Portage Overlays](https://gpo.zugaina.org/sys-libs/libudev-zero).
