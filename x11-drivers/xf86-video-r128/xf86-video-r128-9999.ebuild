@@ -3,7 +3,6 @@
 
 EAPI=8
 
-
 inherit flag-o-matic xlibre
 
 DESCRIPTION="ATI Rage128 video driver"

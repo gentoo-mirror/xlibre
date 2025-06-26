@@ -3,7 +3,6 @@
 
 EAPI=8
 
-
 inherit linux-info xlibre
 
 DESCRIPTION="XLibre input driver based on libinput"

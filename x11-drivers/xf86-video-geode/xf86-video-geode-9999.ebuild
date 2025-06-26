@@ -3,7 +3,6 @@
 
 EAPI=8
 
-
 inherit xlibre
 
 DESCRIPTION="AMD Geode GX and LX graphics driver"
