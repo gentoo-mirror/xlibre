@@ -136,7 +136,7 @@ fi
 EAUTORECONF_DEPEND+=" ${AUTOTOOLS_DEPEND}"
 if [[ ${PN} != util-macros ]] ; then
 	EAUTORECONF_DEPEND+=" >=x11-misc/util-macros-1.18"
-	# Required even by xorg-server
+	# Required even by xlibre-server
 	[[ ${PN} == "font-util" ]] || EAUTORECONF_DEPEND+=" >=media-fonts/font-util-1.2.0"
 fi
 if [[ ${XLIBRE_EAUTORECONF} == no ]] ; then
@@ -182,7 +182,7 @@ BDEPEND+=" virtual/pkgconfig"
 : "${XLIBRE_DRI:="no"}"
 
 DRI_COMMON_DEPEND="
-	x11-base/xorg-server[-minimal]
+	x11-base/xlibre-server[-minimal]
 	x11-libs/libdrm
 "
 case ${XLIBRE_DRI} in
@@ -200,8 +200,8 @@ unset DRI_COMMON_DEPEND
 
 if [[ ${PN} == xf86-video-* || ${PN} == xf86-input-* ]]; then
 	DEPEND+="  x11-base/xorg-proto"
-	RDEPEND+=" x11-base/xorg-server:="
-	COMMON_DEPEND+=" >=x11-base/xorg-server-1.20[xorg]"
+	RDEPEND+=" x11-base/xlibre-server:="
+	COMMON_DEPEND+=" >=x11-base/xlibre-server-1.20[xorg]"
 	[[ ${PN} == xf86-video-* ]] && COMMON_DEPEND+=" >=x11-libs/libpciaccess-0.14"
 fi
 
