@@ -122,6 +122,7 @@ if [[ ${PV} == *9999* ]]; then
 	: "${EGIT_REPO_URI:="https://github.com/X11Libre/${XLIBRE_MODULE}${XLIBRE_PACKAGE_NAME}.git"}"
 elif [[ -n ${XLIBRE_BASE_INDIVIDUAL_URI} ]]; then
 	SRC_URI="${XLIBRE_BASE_INDIVIDUAL_URI}/${XLIBRE_PACKAGE_NAME}/archive/refs/tags/xlibre-${XLIBRE_PACKAGE_NAME}-${PV}.tar.${XLIBRE_TARBALL_SUFFIX}"
+	S="${WORKDIR}/${XLIBRE_PACKAGE_NAME}-xlibre-${XLIBRE_PACKAGE_NAME}-${PV}"
 fi
 
 : "${SLOT:=0}"
