@@ -5,7 +5,7 @@ EAPI=8
 
 XLIBRE_EAUTORECONF="no"
 
-inherit flag-o-matic xlibre meson
+inherit flag-o-matic xlibre-meson
 EGIT_REPO_URI="https://github.com/X11Libre/xserver.git"
 
 DESCRIPTION="XLibre X servers"

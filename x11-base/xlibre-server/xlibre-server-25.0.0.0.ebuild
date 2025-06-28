@@ -5,7 +5,7 @@ EAPI=8
 
 XLIBRE_EAUTORECONF="no"
 
-inherit flag-o-matic xlibre meson
+inherit flag-o-matic xlibre-meson
 
 DESCRIPTION="XLibre X servers"
 SLOT="0/${PV}"
