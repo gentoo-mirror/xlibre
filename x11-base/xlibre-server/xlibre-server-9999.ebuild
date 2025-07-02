@@ -129,6 +129,8 @@ src_configure() {
 		$(meson_use xnest)
 		$(meson_use xorg)
 		$(meson_use xvfb)
+		$(meson_use test tests)
+		$(meson_use test xf86-input-inputtest)
 		-Ddocs=false
 		-Ddrm=true
 		-Ddtrace=false
