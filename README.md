@@ -53,7 +53,9 @@ x11-base/xorg-server **
 x11-drivers/xf86-input-elographics **
 x11-drivers/xf86-input-evdev **
 x11-drivers/xf86-input-joystick **
+x11-drivers/xf86-input-keyboard **
 x11-drivers/xf86-input-libinput **
+x11-drivers/xf86-input-mouse **
 x11-drivers/xf86-input-synaptics **
 x11-drivers/xf86-input-void **
 x11-drivers/xf86-input-vmmouse **
@@ -80,12 +82,11 @@ If `/etc/portage/package.accept_keywords` is a directory, then create a file lik
 
 ## List of X Drivers not in the Overlay
 
-There are some older X drivers which are not packaged in Gentoo anymore and so they aren't packaged here as well as we started with the Gentoo packages.
+There are some older X drivers which are not packaged in Gentoo anymore.
+Some of them aren't packaged here as well, as we started with the Gentoo packages.
 
 These packages are:
 
-* xf86-input-keyboard
-* xf86-input-mouse
 * xf86-video-apm
 * xf86-video-ark
 * xf86-video-chips
@@ -96,7 +97,7 @@ These packages are:
 * xf86-video-mach64
 * xf86-video-neomagic
 * xf86-video-nested
-* xf86-video-nv
+* x11-drivers/xf86-video-nv
 * xf86-video-omap
 * xf86-video-rendition
 * xf86-video-s3virge
@@ -116,8 +117,6 @@ These packages are:
 * xf86-video-voodoo
 * xf86-video-wsfb
 * xf86-video-xgi
-
-For `xf86-input-keyboard` there is already a pull request to [bring back the Linux support](https://github.com/X11Libre/xf86-input-keyboard/pull/1). For `xf86-input-mouse` there is [another one](https://github.com/X11Libre/xf86-input-mouse/pull/1) too.
 
 If you are using any hardware that requires one of the above drivers then don't hesitate and [open an issue](https://github.com/X11Libre/ports-gentoo/issues). We will see what we can do.
 
