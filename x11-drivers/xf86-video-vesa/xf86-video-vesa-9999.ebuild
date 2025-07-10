@@ -6,6 +6,7 @@ EAPI=8
 inherit linux-info xlibre
 
 DESCRIPTION="Generic VESA video driver"
+HOMEPAGE="https://github.com/X11Libre/xf86-video-vesa"
 if [[ ${PV} != 9999* ]]; then
 	KEYWORDS="-* ~alpha ~amd64 ~x86"
 fi

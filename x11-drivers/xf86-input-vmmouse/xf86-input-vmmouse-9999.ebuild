@@ -6,6 +6,7 @@ EAPI=8
 inherit udev xlibre
 
 DESCRIPTION="VMWare mouse input driver"
+HOMEPAGE="https://github.com/X11Libre/xf86-input-vmmouse"
 if [[ ${PV} != 9999* ]]; then
 	KEYWORDS="~amd64 ~x86"
 fi

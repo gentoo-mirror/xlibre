@@ -7,7 +7,7 @@ EAPI=8
 inherit linux-info systemd udev xlibre meson
 
 DESCRIPTION="Driver for Wacom tablets and drawing devices"
-HOMEPAGE="https://linuxwacom.github.io/"
+HOMEPAGE="https://linuxwacom.github.io/ https://github.com/X11Libre/xf86-input-wacom"
 
 LICENSE="GPL-2+"
 if [[ ${PV} != 9999* ]]; then

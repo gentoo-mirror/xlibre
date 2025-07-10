@@ -6,6 +6,7 @@ EAPI=8
 inherit xlibre
 
 DESCRIPTION="Silicon Motion video driver"
+HOMEPAGE="https://github.com/X11Libre/xf86-video-siliconmotion"
 if [[ ${PV} != 9999* ]]; then
 	KEYWORDS="~amd64 ~mips ~x86"
 fi

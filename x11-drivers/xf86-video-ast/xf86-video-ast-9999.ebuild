@@ -6,6 +6,7 @@ EAPI=8
 inherit xlibre
 
 DESCRIPTION="XLibre driver for ASpeedTech cards"
+HOMEPAGE="https://github.com/X11Libre/xf86-video-ast"
 if [[ ${PV} != 9999* ]]; then
 	KEYWORDS="~amd64 ~loong ~ppc ~ppc64 ~x86"
 fi

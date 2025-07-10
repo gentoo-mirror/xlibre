@@ -6,6 +6,7 @@ EAPI=8
 inherit xlibre
 
 DESCRIPTION="XLibre driver for joystick input devices"
+HOMEPAGE="https://github.com/X11Libre/xf86-input-joystick"
 if [[ ${PV} != 9999* ]]; then
 	KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~loong ~m68k ~ppc ~ppc64 ~sparc ~x86"
 fi

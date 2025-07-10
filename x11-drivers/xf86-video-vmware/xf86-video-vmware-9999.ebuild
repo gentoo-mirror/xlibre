@@ -7,6 +7,7 @@ XLIBRE_DRI=always
 inherit xlibre
 
 DESCRIPTION="VMware SVGA video driver"
+HOMEPAGE="https://github.com/X11Libre/xf86-video-vmware"
 if [[ ${PV} != 9999* ]]; then
 	KEYWORDS="~amd64 ~arm64 ~x86"
 fi
