@@ -13,6 +13,7 @@ if [[ ${PV} != 9999* ]]; then
 fi
 
 DESCRIPTION="XLibre driver for Intel cards"
+HOMEPAGE="https://github.com/X11Libre/xf86-video-intel"
 
 IUSE="debug +sna tools +udev uxa valgrind xvmc"
 

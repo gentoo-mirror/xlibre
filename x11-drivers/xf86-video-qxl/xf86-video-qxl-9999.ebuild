@@ -7,6 +7,7 @@ PYTHON_COMPAT=( python3_{10..13} )
 inherit python-single-r1 xlibre
 
 DESCRIPTION="QEMU QXL paravirt video driver"
+HOMEPAGE="https://github.com/X11Libre/xf86-video-qxl"
 
 if [[ ${PV} != 9999* ]]; then
 	KEYWORDS="~amd64 ~loong ~x86"

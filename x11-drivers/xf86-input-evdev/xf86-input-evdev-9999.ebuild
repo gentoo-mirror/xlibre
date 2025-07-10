@@ -6,6 +6,7 @@ EAPI=8
 inherit linux-info xlibre
 
 DESCRIPTION="Generic Linux input driver"
+HOMEPAGE="https://github.com/X11Libre/xf86-input-evdev"
 if [[ ${PV} != 9999* ]]; then
 	KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~loong ~m68k ~mips ~ppc ~ppc64 ~riscv ~sparc ~x86"
 fi

@@ -6,6 +6,7 @@ EAPI=8
 inherit xlibre
 
 DESCRIPTION="AMD Geode GX and LX graphics driver"
+HOMEPAGE="https://github.com/X11Libre/xf86-video-geode"
 if [[ ${PV} != 9999* ]]; then
 	KEYWORDS="~x86"
 fi

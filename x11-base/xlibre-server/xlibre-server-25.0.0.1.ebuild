@@ -8,6 +8,7 @@ XLIBRE_EAUTORECONF="no"
 inherit flag-o-matic xlibre-meson
 
 DESCRIPTION="XLibre X servers"
+HOMEPAGE="https://github.com/X11Libre/xserver"
 SLOT="0/${PV}"
 
 if [[ ${PV} != 9999* ]]; then

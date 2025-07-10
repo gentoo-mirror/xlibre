@@ -6,6 +6,7 @@ EAPI=8
 inherit linux-info xlibre
 
 DESCRIPTION="Driver for Synaptics touchpads"
+HOMEPAGE="https://github.com/X11Libre/xf86-input-synaptics"
 if [[ ${PV} != 9999* ]]; then
 	KEYWORDS="~amd64 ~arm ~arm64 ~loong ~mips ~ppc ~ppc64 ~x86"
 fi

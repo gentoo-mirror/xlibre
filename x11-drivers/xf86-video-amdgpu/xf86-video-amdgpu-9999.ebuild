@@ -11,6 +11,7 @@ if [[ ${PV} != 9999* ]]; then
 fi
 
 DESCRIPTION="Accelerated Open Source driver for AMDGPU cards"
+HOMEPAGE="https://github.com/X11Libre/xf86-video-amdgpu"
 
 IUSE="udev"
 
