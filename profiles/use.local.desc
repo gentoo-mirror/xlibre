@@ -1,0 +1,24 @@
+# This file is deprecated as per GLEP 56 in favor of metadata.xml.
+# Please add your descriptions to your package's metadata.xml ONLY.
+# * generated automatically using pmaint *
+
+x11-base/xlibre-server:elogind - Use elogind to get control over framebuffer when running as regular user
+x11-base/xlibre-server:unwind - Enable libunwind usage for backtraces
+x11-base/xlibre-server:xcsecurity - Build Security extension
+x11-base/xlibre-server:xephyr - Build the Xephyr server
+x11-base/xlibre-server:xnest - Build the Xnest server
+x11-base/xlibre-server:xorg - Build the Xorg X server (HIGHLY RECOMMENDED)
+x11-base/xlibre-server:xvfb - Build the Xvfb server
+x11-base/xorg-server:elogind - Use elogind to get control over framebuffer when running as regular user
+x11-base/xorg-server:unwind - Enable libunwind usage for backtraces
+x11-base/xorg-server:xcsecurity - Build Security extension
+x11-base/xorg-server:xephyr - Build the Xephyr server
+x11-base/xorg-server:xnest - Build the Xnest server
+x11-base/xorg-server:xorg - Build the Xorg X server (HIGHLY RECOMMENDED)
+x11-base/xorg-server:xvfb - Build the Xvfb server
+x11-drivers/xf86-video-geode:ztv - Enable building the V4L2 ZTV driver
+x11-drivers/xf86-video-intel:sna - Enable SandyBridge's New Acceleration (useful on all chipsets, not just SandyBridge)
+x11-drivers/xf86-video-intel:tools - Build the intel-virtual-output tool
+x11-drivers/xf86-video-intel:uxa - Enable UMA Acceleration Architecture
+x11-drivers/xf86-video-intel:xvmc - Enables X-Video Motion Compensation support
+x11-drivers/xf86-video-qxl:xspice - Include Xspice, a standard X server that is also a Spice server

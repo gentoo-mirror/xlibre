@@ -1,0 +1,27 @@
+x11-base/xlibre-drivers 25.0.0.0 9999: Meta package containing deps on all xlibre drivers
+x11-base/xlibre-server 25.0.0.3 25.0.0.4 9999: XLibre X servers
+x11-base/xorg-server 25.0.0.3 25.0.0.4 9999: dummy package for x11-base/xlibre-server
+x11-drivers/xf86-input-elographics 9999: Elographics input driver
+x11-drivers/xf86-input-evdev 9999: Generic Linux input driver
+x11-drivers/xf86-input-joystick 9999: XLibre driver for joystick input devices
+x11-drivers/xf86-input-keyboard 9999: Keyboard input driver
+x11-drivers/xf86-input-libinput 9999: XLibre input driver based on libinput
+x11-drivers/xf86-input-mouse 9999: Mouse input driver
+x11-drivers/xf86-input-synaptics 9999: Driver for Synaptics touchpads
+x11-drivers/xf86-input-vmmouse 9999: VMWare mouse input driver
+x11-drivers/xf86-input-void 9999: null input driver
+x11-drivers/xf86-input-wacom 9999: Driver for Wacom tablets and drawing devices
+x11-drivers/xf86-video-amdgpu 9999: Accelerated Open Source driver for AMDGPU cards
+x11-drivers/xf86-video-ast 9999: XLibre driver for ASpeedTech cards
+x11-drivers/xf86-video-ati 9999: ATI video driver
+x11-drivers/xf86-video-dummy 9999: XLibre driver for dummy cards
+x11-drivers/xf86-video-fbdev 9999: video driver for framebuffer device
+x11-drivers/xf86-video-geode 9999: AMD Geode GX and LX graphics driver
+x11-drivers/xf86-video-intel 9999: XLibre driver for Intel cards
+x11-drivers/xf86-video-mga 9999: Matrox video driver
+x11-drivers/xf86-video-nouveau 9999: Accelerated Open Source driver for nVidia cards
+x11-drivers/xf86-video-qxl 9999: QEMU QXL paravirt video driver
+x11-drivers/xf86-video-r128 9999: ATI Rage128 video driver
+x11-drivers/xf86-video-siliconmotion 9999: Silicon Motion video driver
+x11-drivers/xf86-video-vesa 9999: Generic VESA video driver
+x11-drivers/xf86-video-vmware 9999: VMware SVGA video driver
