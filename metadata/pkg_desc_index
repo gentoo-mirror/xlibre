@@ -1,6 +1,6 @@
 x11-base/xlibre-drivers 25.0.0.0 9999: Meta package containing deps on all xlibre drivers
-x11-base/xlibre-server 25.0.0.3 25.0.0.4 9999: XLibre X servers
-x11-base/xorg-server 25.0.0.3 25.0.0.4 9999: dummy package for x11-base/xlibre-server
+x11-base/xlibre-server 25.0.0.4 25.0.0.7 9999: XLibre X servers
+x11-base/xorg-server 25.0.0.4 25.0.0.7 9999: dummy package for x11-base/xlibre-server
 x11-drivers/xf86-input-elographics 9999: Elographics input driver
 x11-drivers/xf86-input-evdev 9999: Generic Linux input driver
 x11-drivers/xf86-input-joystick 9999: XLibre driver for joystick input devices
