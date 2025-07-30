@@ -95,6 +95,13 @@ REQUIRED_USE="!minimal? (
 	elogind? ( udev )
 	?? ( elogind systemd )"
 
+PATCHES=(
+	"${UPSTREAMED_PATCHES[@]}"
+	"${FILESDIR}"/${PN}-1.12-unloadsubmodule.patch
+	# needed for new eselect-opengl, bug #541232
+	"${FILESDIR}"/${PN}-1.18-support-multiple-Files-sections.patch
+)
+
 src_configure() {
 	# bug #835653
 	use x86 && replace-flags -Os -O2
@@ -123,6 +130,8 @@ src_configure() {
 		$(meson_use xnest)
 		$(meson_use xorg)
 		$(meson_use xvfb)
+		$(meson_use test tests)
+		$(meson_use test xf86-input-inputtest)
 		-Ddocs=false
 		-Ddrm=true
 		-Ddtrace=false
