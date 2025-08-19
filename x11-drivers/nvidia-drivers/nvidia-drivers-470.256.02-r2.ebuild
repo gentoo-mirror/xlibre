@@ -84,6 +84,12 @@ PATCHES=(
 	"${FILESDIR}"/nvidia-settings-390.144-desktop.patch
 	"${FILESDIR}"/nvidia-settings-390.144-no-gtk2.patch
 	"${FILESDIR}"/nvidia-settings-390.144-raw-ldflags.patch
+	"${FILESDIR}"/001-nvidia-legacy470-iosys_map.patch
+	"${FILESDIR}"/002-nvidia-legacy470-follow_pfn.patch
+	"${FILESDIR}"/003-nvidia-470xx-fix-linux-6.12.patch
+	"${FILESDIR}"/004-nvidia-470xx-fix-linux-6.13.patch
+	"${FILESDIR}"/005-nvidia-470xx-fix-linux-6.14.patch
+	"${FILESDIR}"/006-nvidia-470xx-fix-linux-6.15.patch
 )
 
 pkg_setup() {
