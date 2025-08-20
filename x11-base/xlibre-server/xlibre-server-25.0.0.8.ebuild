@@ -8,6 +8,7 @@ XLIBRE_EAUTORECONF="no"
 inherit flag-o-matic xlibre-meson
 
 DESCRIPTION="XLibre X servers"
+HOMEPAGE="https://github.com/X11Libre/xserver"
 SLOT="0/${PV}"
 
 if [[ ${PV} != 9999* ]]; then
@@ -94,6 +95,13 @@ REQUIRED_USE="!minimal? (
 	elogind? ( udev )
 	?? ( elogind systemd )"
 
+PATCHES=(
+	"${UPSTREAMED_PATCHES[@]}"
+	"${FILESDIR}"/${PN}-1.12-unloadsubmodule.patch
+	# needed for new eselect-opengl, bug #541232
+	"${FILESDIR}"/${PN}-1.18-support-multiple-Files-sections.patch
+)
+
 src_configure() {
 	# bug #835653
 	use x86 && replace-flags -Os -O2
@@ -122,6 +130,8 @@ src_configure() {
 		$(meson_use xnest)
 		$(meson_use xorg)
 		$(meson_use xvfb)
+		$(meson_use test tests)
+		$(meson_use test xf86-input-inputtest)
 		-Ddocs=false
 		-Ddrm=true
 		-Ddtrace=false
@@ -170,20 +180,9 @@ src_install() {
 	newins "${FILESDIR}"/xlibre-sets.conf xlibre.conf
 
 	# Create these in case they weren't already installed
-	mkdir -p "${ED}"/usr/$(get_libdir)/xorg/modules/xlibre-25.0/drivers
-	mkdir -p "${ED}"/usr/$(get_libdir)/xorg/modules/xlibre-25.0/input
-	mkdir -p "${ED}"/usr/$(get_libdir)/xorg/modules/xlibre-25.0/extensions
-
-	# Portage doesn't install empty directories
-	# https://blogs.gentoo.org/mgorny/2018/05/20/empty-directories-into-dodir-keepdir-and-tmpfiles-d/
-	touch "${ED}"/usr/$(get_libdir)/xorg/modules/xlibre-25.0/drivers/.keep
-	touch "${ED}"/usr/$(get_libdir)/xorg/modules/xlibre-25.0/input/.keep
-	touch "${ED}"/usr/$(get_libdir)/xorg/modules/xlibre-25.0/extensions/.keep
-
-	# Symlinks so that drivers are installed where they should be
-	ln -rsf "${ED}"/usr/$(get_libdir)/xorg/modules/xlibre-25.0/drivers "${ED}"/usr/$(get_libdir)/xorg/modules/drivers
-	ln -rsf "${ED}"/usr/$(get_libdir)/xorg/modules/xlibre-25.0/input "${ED}"/usr/$(get_libdir)/xorg/modules/input
-	ln -rsf "${ED}"/usr/$(get_libdir)/xorg/modules/xlibre-25.0/extensions "${ED}"/usr/$(get_libdir)/xorg/modules/extensions
+	keepdir /usr/$(get_libdir)/xorg/modules/xlibre-25.0/drivers
+	keepdir /usr/$(get_libdir)/xorg/modules/xlibre-25.0/input
+	keepdir /usr/$(get_libdir)/xorg/modules/xlibre-25.0/extensions
 
 	ewarn "If this is the first time you installed xlibre, you have to emerge @x11-module-rebuild"
 }
