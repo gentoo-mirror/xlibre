@@ -1,6 +1,6 @@
 x11-base/xlibre-drivers 25.0.0.0 9999: Meta package containing deps on all xlibre drivers
-x11-base/xlibre-server 25.0.0.8 25.0.0.9 9999: XLibre X servers
-x11-base/xorg-server 25.0.0.8 25.0.0.9 9999: dummy package for x11-base/xlibre-server
+x11-base/xlibre-server 25.0.0.9 25.0.0.11 9999: XLibre X servers
+x11-base/xorg-server 25.0.0.9 25.0.0.11 9999: dummy package for x11-base/xlibre-server
 x11-drivers/nvidia-drivers 390.157 470.256.02-r2: NVIDIA Accelerated Graphics Driver
 x11-drivers/xf86-input-elographics 9999: Elographics input driver
 x11-drivers/xf86-input-evdev 9999: Generic Linux input driver
