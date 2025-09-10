@@ -1,10 +1,10 @@
 DEFINED_PHASES=-
-DEPEND=x11-base/xlibre-server:0/9999[xephyr=,xnest=,xorg=,xvfb=,debug=,elogind=,minimal=,selinux=,suid=,systemd=,test=,udev=,unwind=,xcsecurity=]
+DEPEND=x11-base/xlibre-server:0/9999[xephyr=,xfbdev=,xnest=,xorg=,xvfb=,debug=,elogind=,minimal=,selinux=,suid=,systemd=,test=,udev=,unwind=,xcsecurity=,xinerama=]
 DESCRIPTION=dummy package for x11-base/xlibre-server
 EAPI=8
 HOMEPAGE=https://github.com/X11Libre
-IUSE=xephyr xnest xorg xvfb debug +elogind minimal selinux suid systemd test +udev unwind xcsecurity
+IUSE=xephyr xfbdev xnest xorg xvfb debug +elogind minimal selinux suid systemd test +udev unwind xcsecurity xinerama
 LICENSE=metapackage
 RESTRICT=!test? ( test )
 SLOT=0/9999
-_md5_=e8b06acbaa78702aaa4206b8fac889d1
+_md5_=ce9187fd00615aa7130b543e4af9c321
