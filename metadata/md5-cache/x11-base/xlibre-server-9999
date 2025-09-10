@@ -5,7 +5,7 @@ DESCRIPTION=XLibre X servers
 EAPI=8
 HOMEPAGE=https://github.com/X11Libre/xserver
 INHERIT=flag-o-matic xlibre-meson
-IUSE=xephyr xfbdev xnest xorg xvfb debug +elogind minimal selinux suid systemd test +udev unwind xcsecurity +xinerama
+IUSE=xephyr xfbdev xnest xorg xvfb xcsecurity +xinerama +glx debug +elogind minimal selinux suid systemd test +udev unwind
 LICENSE=MIT
 PDEPEND=xorg? ( >=x11-base/xlibre-drivers-9999 )
 PROPERTIES=live
@@ -14,4 +14,4 @@ REQUIRED_USE=!minimal? ( || ( xephyr xfbdev xnest xorg xvfb ) ) elogind? ( udev 
 RESTRICT=!test? ( test )
 SLOT=0/9999
 _eclasses_=toolchain-funcs	a0b29008c671a362b505f96fa80ce9c0	flag-o-matic	a7afe42e95fb46ce9691605acfb24672	git-r3	875eb471682d3e1f18da124be97dcc81	multiprocessing	1e32df7deee68372153dca65f4a7c21f	ninja-utils	2df4e452cea39a9ec8fb543ce059f8d6	python-utils-r1	b7eb9c3a6dc6662368634584aab44a2c	meson	99466844dd8d4fcfb07578a76f5a9922	xlibre-meson	5097e6c3054cf6685138539cd2902767
-_md5_=8b51fd413de54d3d7a59b2e9963c86ee
+_md5_=f0f8a71782b7f7521578b649679ae800
